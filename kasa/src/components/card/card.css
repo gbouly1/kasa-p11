@@ -1,0 +1,24 @@
+.card {
+  height: 340px;
+  width: 340px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card h3 {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 96, 96, 1);
+  border-radius: 10px;
+  padding: 5px;
+  margin-right: 20px;
+}

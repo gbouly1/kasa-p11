@@ -1,0 +1,7 @@
+.banner {
+  height: 223px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
+  position: relative;
+}
