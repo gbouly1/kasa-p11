@@ -13,6 +13,7 @@ a {
   height: fit-content;
 }
 
+/* css nav active  */
 .nav-active {
   border-bottom: 1px solid rgba(0, 0, 0, 1);
 }
