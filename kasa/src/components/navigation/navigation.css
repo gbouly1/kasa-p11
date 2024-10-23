@@ -1,0 +1,18 @@
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-link {
+  display: flex;
+  list-style-type: none;
+  gap: 30px;
+}
+a {
+  color: rgba(0, 0, 0, 1);
+  text-decoration: none;
+  height: fit-content;
+}
+
+.nav-active {
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
