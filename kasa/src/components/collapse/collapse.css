@@ -1,0 +1,58 @@
+.collapse-description {
+  color: black;
+  margin: 0;
+}
+
+.collapse-wrapper {
+  max-width: 1020px;
+  width: 100%;
+}
+
+.collapse-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 96, 96, 1);
+  height: 1rem;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.collapse-title h2 {
+  color: rgba(255, 255, 255, 1);
+}
+
+.collapse-content {
+  padding: 10px;
+  background-color: rgba(209, 206, 206, 0.289);
+  border-radius: 0 0 5px 5px;
+  transition: all 0.5s ease;
+}
+
+.collapse-arrow {
+  cursor: pointer;
+}
+
+.content-inactive {
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  opacity: 0;
+}
+
+.content-active {
+  height: 100%;
+  opacity: 1;
+}
+
+.arrow-inactive {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transform: rotate(0deg);
+}
+
+.arrow-active {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transform: rotate(180deg);
+}
