@@ -1,0 +1,24 @@
+.slider p {
+  color: red;
+}
+
+.location {
+  color: rgba(0, 0, 0, 1);
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name-content {
+  display: flex;
+}
+
+.name-content img {
+  border-radius: 50%;
+}
+
+.collapse-logement {
+  display: flex;
+}

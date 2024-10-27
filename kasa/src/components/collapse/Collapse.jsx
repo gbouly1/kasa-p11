@@ -9,7 +9,7 @@ const Collapse = ({ title, description }) => {
       <div className="collapse-title" onClick={() => setCollpased(!collapsed)}>
         <h2>{title}</h2>
         <img
-          src="./arrow.png"
+          src="/arrow.png"
           alt="fleche de déroulement"
           className={`collapse-arrow" ${
             collapsed ? "arrow-inactive" : "arrow-active"
@@ -21,7 +21,9 @@ const Collapse = ({ title, description }) => {
           collapsed ? "content-inactive" : "content-active"
         }`}
       >
-        {!collapsed && <p className="collapse-description">{description}</p>}
+        {!collapsed && (
+          <div className="collapse-description">{description}</div>
+        )}
       </div>
     </div>
   );
