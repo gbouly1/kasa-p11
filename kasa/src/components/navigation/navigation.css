@@ -17,3 +17,16 @@ a {
 .nav-active {
   border-bottom: 1px solid rgba(0, 0, 0, 1);
 }
+
+@media (max-width: 1068px) {
+  .nav-link {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 520px) {
+  .nav-link {
+    gap: 7px;
+    padding: 0;
+  }
+}
