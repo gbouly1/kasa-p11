@@ -5,3 +5,7 @@
   margin: 50px 0 50px 0;
   gap: 35px;
 }
+
+.collapse-description p {
+  color: rgba(0, 0, 0, 1);
+}

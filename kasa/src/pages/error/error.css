@@ -13,7 +13,7 @@
 .error-404 {
   color: rgba(255, 96, 96, 1);
   font-weight: 700;
-  font-size: 10em;
+  font-size: 15em;
   margin: 0;
 }
 
@@ -22,4 +22,14 @@
   flex-direction: column;
   align-items: center;
   min-height: 60vh;
+}
+
+@media (max-width: 1068px) {
+  .error-404 {
+    font-size: 10em;
+  }
+
+  .page-error {
+    font-size: 1.5em;
+  }
 }
