@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { useState, useContext } from "react";
 import { DataContext } from "../../components/api/Api";
 import Collapse from "../../components/collapse/Collapse";
+import Slider from "../../components/slider/Slider";
 
 const Logement = () => {
   const { id } = useParams();
@@ -16,9 +17,7 @@ const Logement = () => {
 
   return (
     <div className="logement-container">
-      <div className="slider">
-        <p className="slider-test">SLIDER</p>
-      </div>
+      <Slider logementId={id} />
       <div className="info-container">
         <div className="description-content">
           <h1>{logement.title}</h1>
