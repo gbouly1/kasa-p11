@@ -1,11 +1,13 @@
 import React from "react";
 import "./logement.css";
-import data from "../../assets/data.json";
 import { useParams } from "react-router-dom";
+import { useState, useContext } from "react";
+import { DataContext } from "../../components/api/Api";
 import Collapse from "../../components/collapse/Collapse";
 
 const Logement = () => {
   const { id } = useParams();
+  const data = useContext(DataContext);
   const logement = data.find((logement) => logement.id === id);
 
   if (!logement) {
@@ -32,7 +34,7 @@ const Logement = () => {
         <div className="name-rating-content">
           <div className="name-content">
             <h3>{logement.host.name}</h3>
-            <img src={logement.host.picture} alt="Photo de l'host" />
+            <img src={logement.host.picture} alt="Portrait de l'host" />
           </div>
           <div className="rating-content"></div>
         </div>

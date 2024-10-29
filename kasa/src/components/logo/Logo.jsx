@@ -1,12 +1,13 @@
-import React from 'react';
-import "./logo.css"
+import React from "react";
+import "./logo.css";
+import logoImage from "../../assets/img/logoImg.png";
 
 const Logo = () => {
-    return (
-        <div className="Logo">
-            <img className='logo-header' src="./logo2x.png" alt="Logo Kasa" />
-        </div>
-    );
+  return (
+    <div className="Logo">
+      <img className="logo-header" src={logoImage} alt="Logo Kasa" />
+    </div>
+  );
 };
 
 export default Logo;
