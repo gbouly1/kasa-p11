@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./collapse.css";
 
 const Collapse = ({ title, description }) => {
-  const [collapsed, setCollpased] = useState(false);
+  const [collapsed, setCollpased] = useState(true);
 
   return (
     <div className="collapse-wrapper">

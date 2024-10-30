@@ -1,3 +1,7 @@
+.logement-container {
+  margin: 50px 0 50px 0;
+}
+
 .location {
   color: rgba(0, 0, 0, 1);
 }
@@ -12,6 +16,18 @@
   gap: 10px;
 }
 
+.rating-content {
+  display: flex;
+  gap: 5px;
+}
+
+.name-rating-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-end;
+}
+
 .name-content img {
   border-radius: 50%;
   width: 64px;
@@ -21,6 +37,12 @@
 .collapse-logement {
   display: flex;
   margin-top: 25px;
+  gap: 35px;
+}
+
+.collapse-description {
+  display: flex;
+  flex-direction: column;
 }
 
 .description-content {
@@ -43,6 +65,7 @@
 
 .tags-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -53,4 +76,30 @@
   padding: 5px 25px;
   font-size: 12px;
   font-weight: bold;
+}
+
+footer {
+  margin-top: 100px;
+}
+
+@media (max-width: 520px) {
+  .collapse-logement {
+    display: flex;
+    flex-direction: column;
+  }
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .name-rating-content {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .rating-content .star {
+    width: 13px;
+    height: auto;
+  }
 }

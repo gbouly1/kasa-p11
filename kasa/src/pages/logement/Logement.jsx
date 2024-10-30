@@ -5,6 +5,8 @@ import { useState, useContext } from "react";
 import { DataContext } from "../../components/api/Api";
 import Collapse from "../../components/collapse/Collapse";
 import Slider from "../../components/slider/Slider";
+import filledStar from "../../assets/img/full-star.png";
+import emptyStar from "../../assets/img/empty-star.png";
 
 const Logement = () => {
   const { id } = useParams();
@@ -14,6 +16,22 @@ const Logement = () => {
   if (!logement) {
     return <h2>Logement non trouvé</h2>;
   }
+
+  // Fonction pour générer les étoiles en fonction de la note
+  const renderStars = (rating) => {
+    const stars = [];
+    for (let i = 0; i < 5; i++) {
+      stars.push(
+        <img
+          key={i}
+          src={i < rating ? filledStar : emptyStar}
+          alt={i < rating ? "Étoile pleine" : "Étoile vide"}
+          className="star"
+        />
+      );
+    }
+    return stars;
+  };
 
   return (
     <div className="logement-container">
@@ -35,7 +53,9 @@ const Logement = () => {
             <h3>{logement.host.name}</h3>
             <img src={logement.host.picture} alt="Portrait de l'host" />
           </div>
-          <div className="rating-content"></div>
+          <div className="rating-content">
+            {renderStars(parseInt(logement.rating))}
+          </div>
         </div>
       </div>
       <div className="collapse-logement">

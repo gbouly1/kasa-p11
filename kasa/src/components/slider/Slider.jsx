@@ -18,14 +18,18 @@ const Slider = ({ logementId }) => {
     setSlide(slide === 0 ? logement.pictures.length - 1 : slide - 1);
   };
 
+  const hasMultipleImages = logement.pictures.length > 1;
+
   return (
     <div className="slider">
-      <img
-        src={arrowLeft}
-        alt="Fleche image précédente"
-        className="arrow arrow-left"
-        onClick={prevSlide}
-      />
+      {hasMultipleImages && (
+        <img
+          src={arrowLeft}
+          alt="Fleche image précédente"
+          className="arrow arrow-left"
+          onClick={prevSlide}
+        />
+      )}
       {logement.pictures.map((picture, index) => (
         <img
           src={picture}
@@ -36,12 +40,14 @@ const Slider = ({ logementId }) => {
           }
         />
       ))}
-      <img
-        src={arrowRight}
-        alt="Fleche image suivante"
-        className="arrow arrow-right"
-        onClick={nextSlide}
-      />
+      {hasMultipleImages && (
+        <img
+          src={arrowRight}
+          alt="Fleche image suivante"
+          className="arrow arrow-right"
+          onClick={nextSlide}
+        />
+      )}
       <div className="slider-indicator">
         <p>
           {slide + 1} / {logement.pictures.length}
