@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./collapse.css";
 
+// component collapse pour la page about et logement
 const Collapse = ({ title, description }) => {
   const [collapsed, setCollpased] = useState(true);
 

@@ -18,9 +18,10 @@ const Slider = ({ logementId }) => {
     setSlide(slide === 0 ? logement.pictures.length - 1 : slide - 1);
   };
 
-  const hasMultipleImages = logement.pictures.length > 1;
+  const hasMultipleImages = logement.pictures.length > 1; // vérifie qu'il ya plus d'une slide
 
   return (
+    // affiche les flèches de nav si + d'1 slide
     <div className="slider">
       {hasMultipleImages && (
         <img
