@@ -7,6 +7,7 @@ import Collapse from "../../components/collapse/Collapse";
 import Slider from "../../components/slider/Slider";
 import filledStar from "../../assets/img/full-star.png";
 import emptyStar from "../../assets/img/empty-star.png";
+import Error from "../error/Error";
 
 const Logement = () => {
   const { id } = useParams();
@@ -14,7 +15,7 @@ const Logement = () => {
   const logement = data.find((logement) => logement.id === id);
 
   if (!logement) {
-    return <h2>Logement non trouvé</h2>;
+    return <Error />;
   }
 
   // Fonction pour générer les étoiles en fonction de la note
