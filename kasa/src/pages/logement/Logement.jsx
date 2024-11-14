@@ -60,8 +60,13 @@ const Logement = () => {
         </div>
       </div>
       <div className="collapse-logement">
-        <Collapse title="Description" description={logement.description} />
         <Collapse
+          key="description"
+          title="Description"
+          description={logement.description}
+        />
+        <Collapse
+          key="équipement"
           title="Équipement"
           description={logement.equipments.map((equipments, index) => (
             <span key={index} className="equipments">
