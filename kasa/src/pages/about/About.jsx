@@ -11,6 +11,7 @@ const About = () => {
         <Banner image={aboutBannerImage} />
         <div className="collapse-container">
           <Collapse
+            key="fiabilité"
             title="Fiabilité"
             description={
               <p>
@@ -21,6 +22,7 @@ const About = () => {
             }
           />
           <Collapse
+            key="respect"
             title="Respect"
             description={
               <p>
@@ -31,6 +33,7 @@ const About = () => {
             }
           />
           <Collapse
+            key="service"
             title="Service"
             description={
               <p>
@@ -42,6 +45,7 @@ const About = () => {
             }
           />
           <Collapse
+            key="sécurité"
             title="Sécurité"
             description={
               <p>
