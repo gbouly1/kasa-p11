@@ -8,6 +8,7 @@ import Slider from "../../components/slider/Slider";
 import filledStar from "../../assets/img/full-star.png";
 import emptyStar from "../../assets/img/empty-star.png";
 import Error from "../error/Error";
+import Rating from "../../components/rating/Rating";
 
 const Logement = () => {
   const { id } = useParams();
@@ -17,22 +18,6 @@ const Logement = () => {
   if (!logement) {
     return <Error />;
   }
-
-  // Fonction pour générer les étoiles en fonction de la note
-  const renderStars = (rating) => {
-    const stars = [];
-    for (let i = 0; i < 5; i++) {
-      stars.push(
-        <img
-          key={i}
-          src={i < rating ? filledStar : emptyStar}
-          alt={i < rating ? "Étoile pleine" : "Étoile vide"}
-          className="star"
-        />
-      );
-    }
-    return stars;
-  };
 
   return (
     <div className="logement-container">
@@ -55,7 +40,7 @@ const Logement = () => {
             <img src={logement.host.picture} alt="Portrait de l'host" />
           </div>
           <div className="rating-content">
-            {renderStars(parseInt(logement.rating))}
+            <Rating rating={parseInt(logement.rating)} />
           </div>
         </div>
       </div>

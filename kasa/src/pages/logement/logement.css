@@ -16,11 +16,6 @@
   gap: 10px;
 }
 
-.rating-content {
-  display: flex;
-  gap: 5px;
-}
-
 .name-rating-content {
   display: flex;
   flex-direction: column;
