@@ -1,5 +1,5 @@
 import React from "react";
-import "./test.css";
+import "./accueil.css";
 import Banner from "../../components/banner/Banner";
 import homeBannerImage from "../../assets/img/banner-home.png";
 import Card from "../../components/card/Card";
