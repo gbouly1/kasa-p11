@@ -50,9 +50,11 @@ const Slider = ({ logementId }) => {
         />
       )}
       <div className="slider-indicator">
-        <p>
-          {slide + 1} / {logement.pictures.length}
-        </p>
+        {hasMultipleImages && (
+          <p>
+            {slide + 1} / {logement.pictures.length}
+          </p>
+        )}
       </div>
     </div>
   );
